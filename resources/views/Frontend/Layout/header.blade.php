@@ -54,8 +54,8 @@
                     </div>
                     <div class="navbar-collapse collapse ">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{!! asset('Frontend/index.html') !!}">Home</a></li>
-                            <li><a href="{{ route('about') }}">Tentang</a></li>
+                            <li class="active"><a href="{{ route('index') }}">Home</a></li>
+                            <li><a href="#">Tentang</a></li>
                             {{-- <li class="dropdown">
                                 <a href="" data-toggle="dropdown" class="dropdown-toggle">About Us <b
                                         class="caret"></b></a>
@@ -69,7 +69,7 @@
                                 </ul>
                             </li> --}}
                             <li><a href="{!! asset('Frontend/courses.html') !!}">Jadwal</a></li>
-                            <li><a href="{!! asset('Frontend/portfolio.html') !!}">Galeri</a></li>
+                            <li><a href="{{ route('galeri_f') }}">Galeri</a></li>
                             <li><a href="{!! asset('Frontend/pricing.html') !!}">Blog</a></li>
                             <li><a href="{!! asset('Frontend/contact.html') !!}">Kontak</a></li>
                         </ul>

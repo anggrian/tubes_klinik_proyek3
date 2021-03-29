@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Galery;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -16,10 +18,10 @@ class FrontendController extends Controller
         return view('Frontend.Layout.index');
     }
 
-    public function about()
+    public function galeri_f()
     {
-        // return view('Frontend.Layout.index');
-        echo ('kuntul');
+        $galery = DB::table('galery')->get();
+        return view('Frontend.Content.gambar', compact('galery'));
     }
     /**
      * Show the form for creating a new resource.
