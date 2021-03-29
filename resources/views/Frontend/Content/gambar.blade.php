@@ -57,17 +57,18 @@
 
                             <div class="gallery-item">
                                 <div class="gallery-thumb">
-                                    <img src="../../assets/uploads/galeri/{{ $item->foto }}" alt="6th gallery Thumb">
+                                    <img src="../../assets/uploads/galeri/{{ $item->foto }}" class="img-responsive"
+                                        alt="6th gallery Thumb">
                                     <div class="image-overlay"></div>
-                                    <img src="../../assets/uploads/galeri/{{ $item->foto }}"><i class="fa fa-eye"></i></a>
-                                    <a href="#" class="gallery-link"><i class="fa fa-link"></i></a>
+
+
                                 </div>
                                 <div class="gallery-details">
                                     <div class="editContent">
-                                        <h5>6th gallery Item</h5>
+                                        <h5>{{ $item->judul }}</h5>
                                     </div>
                                     <div class="editContent">
-                                        <p>Nullam id dolor id nibh ultricies vehicula.</p>
+                                        <p>{!! $item->deskripsi !!}</p>
                                     </div>
                                 </div>
                             </div>
