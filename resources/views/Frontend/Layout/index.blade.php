@@ -34,13 +34,9 @@
                 <div class="col-md-4">
                     <!-- Heading and para -->
                     <div class="block-heading-two">
-                        <h3><span>Tentang kami</span></h3>
+                        <h3><span>{{ $abouts->title_about }}</span></h3>
                     </div>
-                    <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                        aspernatur. <br><br>Sed ut perspiciaatis iste natus error sit voluptatem probably haven't
-                        heard of them accusamus.</p>
+                    <p>{!! $abouts->description_about !!}</p>
                     <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
 
                 </div>
@@ -51,76 +47,22 @@
                     <!-- Accordion starts -->
                     <div class="panel-group" id="accordion-alt3">
                         <!-- Panel. Use "panel-XXX" class for different colors. Replace "XXX" with color. -->
-                        <div class="panel">
-                            <!-- Panel heading -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseOne-alt3">
-                                        <i class="fa fa-angle-right"></i> kontrol Kesehatan Ibu dan Anak
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne-alt3" class="panel-collapse collapse">
-                                <!-- Panel body -->
-                                <div class="panel-body">
-                                    Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                    voluptatem quia voluptas
+                        @foreach ($services as $item)
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
+                                            <i class="fa fa-angle-right"></i> {{ $item->title_service }}
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour-alt3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        {!! $item->description_service !!}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseTwo-alt3">
-                                        <i class="fa fa-angle-right"></i> Imunisasi
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                    voluptatem quia voluptas
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseThree-alt3">
-                                        <i class="fa fa-angle-right"></i> Persalinan
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseThree-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                    voluptatem quia voluptas
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-alt3" href="#collapseFour-alt3">
-                                        <i class="fa fa-angle-right"></i> Keluarga Berencana
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseFour-alt3" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                    voluptatem quia voluptas
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <!-- Accordion ends -->
 
@@ -158,9 +100,8 @@
             <div class="row">
                 <div class="col-md-10 col-sm-9">
                     <h3>SELAMAT DATANG DI PONDOK BERSALIN BIDAN RANI</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quae porro consequatur
-                        aliquam, incidunt eius magni provident, doloribus omnis minus temporibus perferendis
-                        nesciunt quam repellendus nulla nemo ipsum odit corrupti</p>
+                    <p>Website ini berisi informasi dari pondak bersalin bidan rani yang mana didalam nya mencakup beberapa
+                        hal antara lain tentang imunisasi, persalinan dan Keluagra berencana</p>
                 </div>
                 <div class="col-md-2 col-sm-3">
                     <a href="#" class="btn btn-primary">Read More</a>
@@ -176,10 +117,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="aligncenter">
-                        <h2 class="aligncenter">Kenapa kita berbeda ?</h2>Lorem ipsum dolor sit amet, consectetur
-                        adipisicing
-                        elit. Dolores quae porro consequatur aliquam, incidunt eius magni provident, doloribus omnis
-                        minus ovident, doloribus omnis minus temporibus perferendis nesciunt..
+                        <h2 class="aligncenter">Kenapa kita berbeda ?</h2>Untuk dapat mewujudkan Visi dan Misi pembangunan
+                        kesehatan yang diselenggarakan oleh “Pondok Bersalin Bidan Rani” yaitu tercapainya kesehatan ibu dan
+                        bayi. menuju terwujudnya Indonesia sehat terdapat 4 (empat) indikator utama yaitu lingkungan sehat,
+                        perilaku sehat, cakupan pelayanan kesehatan yang bermutu dan kesehatan ibu dan bayi.
                     </div>
                     <br />
                 </div>
@@ -190,33 +131,33 @@
                         <div class="col-md-3 text-center">
                             <span class="icons c1"><i class="fa fa-book"></i></span>
                             <div class="box-area">
-                                <h3>Dpesialis di Bidangnya</h3>
-                                <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro
-                                    consequatur aliquam, incidunt eius magni provident</p>
+                                <h3>Pesialis di Bidangnya</h3>
+                                <p>Semua bidan di pondok bersalin ini telah lulus sesuai dengan keahliannya dan insyaallah
+                                    dapat dipercaya untuk kinerjanya</p>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <span class="icons c2"><i class="fa fa-users"></i></span>
                             <div class="box-area">
                                 <h3>Pelayanan Ramah</h3>
-                                <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro
-                                    consequatur aliquam, incidunt eius magni provident</p>
+                                <p>Pelayanan di pondok bersalin ini sangat ramah dan juga menerapkan 5R (ringkas, rapi,
+                                    resik, rawat, dan rajin)</p>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <span class="icons c3"><i class="fa fa-trophy"></i></span>
                             <div class="box-area">
                                 <h3>Fasilitas Lengkap</h3>
-                                <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro
-                                    consequatur aliquam, incidunt eius magni provident</p>
+                                <p>Fasilitas yang disediakan lengkap dan rapih, diantaranya ruang bersalin telah dilengkapi
+                                    dengan peralatan yang dibutuhkan dalam proses persalianan</p>
                             </div>
                         </div>
                         <div class="col-md-3 text-center">
                             <span class="icons c4"><i class="fa fa-globe"></i></span>
                             <div class="box-area">
                                 <h3>Informasi Up to Date</h3>
-                                <p>Lorem ipsum dolor sitamet, consec tetur adipisicing elit. Dolores quae porro
-                                    consequatur aliquam, incidunt eius magni provident</p>
+                                <p>Semua informasi yang disajikan di website ini adalah informasi terbaru dari Pondok
+                                    Bersalin Rani</p>
                             </div>
                         </div>
                     </div>
@@ -233,19 +174,14 @@
                 <div class="col-md-12">
                     <div class="section-title text-center">
                         <h2>Team Kami</h2>
-                        <p>Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada
-                            Pellentesque <br>ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis
-                            porttitor volutpat.</p>
+
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="about-text">
-                        <p>Grids is a responsive Multipurpose Template. Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin
-                            molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor
-                            eget felis porttitor volutpat.</p>
+
 
                         <ul class="withArrow">
                             <li><span class="fa fa-angle-right"></span> Rani Kusumawati A.Md. Keb </li>

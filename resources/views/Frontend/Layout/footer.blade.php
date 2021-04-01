@@ -58,25 +58,11 @@
                 <div class="col-lg-6">
                     <div class="copyright">
                         <p>
-                            <span>&copy; Cambridge 2018 All right reserved. <br /></span> This <a
-                                href="http://webthemez.com/free-bootstrap-templates" target="_blank">Free
-                                Bootstrap Template</a> provided by WebThemez.
+                            <span>&copy; Kelompok 9 <br /></span> D3TI3A <a
+                                href="http://webthemez.com/free-bootstrap-templates" target="_blank">
+                                Proyek III</a> 2021.
                         </p>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="social-network">
-                        <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-                        </li>
-                        <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

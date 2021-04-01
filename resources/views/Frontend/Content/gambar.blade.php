@@ -2,7 +2,6 @@
 @extends('Frontend.Layout.header')
 @section('title', 'BPN Bidan Rani')
 @section('content')
-    <h1>muncul coba amikim</h1>
     <section id="inner-headline">
         <div class="container">
             <div class="row">
@@ -52,9 +51,8 @@
             <div class="row">
                 <div id="isotope-gallery-container">
                     <!-- /.gallery-item-wrapper -->
-                    <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
-                        @foreach ($galery as $item)
-
+                    @foreach ($galery as $item)
+                        <div class="col-md-4 col-sm-6 col-xs-12 gallery-item-wrapper artwork creative">
                             <div class="gallery-item">
                                 <div class="gallery-thumb">
                                     <img src="../../assets/uploads/galeri/{{ $item->foto }}" class="img-responsive"
@@ -72,8 +70,8 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
 
                 </div>
                 <!-- /.isotope-gallery-container -->

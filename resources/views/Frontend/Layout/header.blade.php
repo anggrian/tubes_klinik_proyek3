@@ -69,7 +69,7 @@
                                 </ul>
                             </li> --}}
                             <li><a href="{!! asset('Frontend/courses.html') !!}">Jadwal</a></li>
-                            <li><a href="{{ route('galeri_f') }}">Galeri</a></li>
+                            <li><a href="">Galeri</a></li>
                             <li><a href="{!! asset('Frontend/pricing.html') !!}">Blog</a></li>
                             <li><a href="{!! asset('Frontend/contact.html') !!}">Kontak</a></li>
                         </ul>

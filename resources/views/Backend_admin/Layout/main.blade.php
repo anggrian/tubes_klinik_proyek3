@@ -44,8 +44,11 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="" class="site_title"><i class="fa fa-paw"></i>
-                            <span>Admin</span></a>
+                        <a href="{{ asset('/home') }}" class="site_title"><img
+                                src="{{ asset('asset_img/bidan.png') }}" alt="img_null"
+                                style="width: 50px; background:white; border-radius:50%;">
+                            <span>BPN |
+                                Bidan Rani</span></a>
                     </div>
                     <div class="clearfix"></div>
                     <hr>
@@ -55,7 +58,20 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <ul class="nav side-menu">
-                                <li><a href="{{ asset('galeri') }}"><i class="fa fa-desktop"></i>Galeri</a>
+                                <li><a href="{{ asset('tentang') }}"><i class="fa fa-desktop"></i>TENTANG</a>
+                                </li>
+                                <li><a href="{{ asset('layanan') }}"><i class="fa fa-desktop"></i>LAYANAN</a>
+                                </li>
+                                <li><a href="{{ asset('fitur') }}"><i class="fa fa-desktop"></i>FITUR</a></li>
+                                <li><a href="{{ asset('paket') }}"><i class="fa fa-bar-chart-o"></i>PAKET</a>
+                                </li>
+                                <li><a><i class="fa fa-laptop"></i>Blog <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{ asset('/post') }}">Post </a></li>
+                                        <li><a href="{{ asset('/category') }}">Kategori </a></li>
+                                        <li><a href="{{ asset('/tag') }}">tag </a></li>
+                                        <li><a href="{{ asset('/komentar') }}">Komentar </a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -73,15 +89,16 @@
                     <nav class="nav navbar-nav">
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
-                                <span class="name_navbar">nama</span>
+                                <span class="name_navbar">{{ $login->name }}</span>
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
                                     id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/uploads/profiles/" alt="img_null">
+                                    <img src="../assets/uploads/profiles/{{ $login->img_profile }}" alt="img_null">
                                 </a>
                                 <div class=" dropdown-menu dropdown-usermenu pull-right"
                                     aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">AKUN</a>
-                                    <a class="dropdown-item" href=""><i class="fa fa-sign-out pull-right"></i>KELUAR</a>
+                                    <a class="dropdown-item" href="{{ route('akun') }}">AKUN</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"><i
+                                            class="fa fa-sign-out pull-right"></i>KELUAR</a>
                                 </div>
                             </li>
                         </ul>
